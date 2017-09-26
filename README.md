@@ -3,7 +3,7 @@
 
 使用案例：
 
-     new ThreeLinkAge({
+     new MK_ThreeLinkAge({
           data: result.data,
           provice: document.getElementById('province'), //省份dom对象
           city: document.getElementById('city'), //城市dom对象
