@@ -1,5 +1,5 @@
 # Monkey-ThreeLinkAge-tx
-三级联动，可通过腾讯定位进行柜台排序
+支持三级联动和二级联动，可通过腾讯定位进行柜台排序。
 
 页面需引入腾讯地图js库
 
@@ -10,7 +10,7 @@
 
      new MK_ThreeLinkAge({
           data: result.data,
-          provice: document.getElementById('province'), //省份dom对象
+          provice: document.getElementById('province'), //省份dom对象，二级联动时，此参数为空
           city: document.getElementById('city'), //城市dom对象
           district: document.getElementById('counter'), //柜台dom对象
           location:false, //是否开启定位
