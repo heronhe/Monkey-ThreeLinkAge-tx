@@ -183,7 +183,7 @@ var MK_ThreeLinkAge = (function () {
             //默认选中最近的省
             var oOption, oOptionC, oOptionD;
 
-            if(self.oProvice)
+            if(self.oProvice) {
                 for (var i = 0; i < self.oProvice.options.length; i++) {
                     if (self.locationStates) {
                         if (self.oProvice.options[i].value === firstCT.p) {
@@ -191,6 +191,10 @@ var MK_ThreeLinkAge = (function () {
                         }
                     }
                 }
+
+                if (typeof self.updateProvice === 'function')
+                    self.updateProvice();
+            }
             var _cn;
             //默认选中当前最近的市区
             firstCT.p = self.oProvice ? firstCT.p : 'all';
@@ -205,8 +209,11 @@ var MK_ThreeLinkAge = (function () {
                         oOptionC.selected = true;
                     }
                 }
-
             }
+
+            if (typeof self.updateCity === 'function')
+                self.updateCity();
+
             var _cc;
             //默认选中当前最近的柜台
             if (self.oDistrict) {
@@ -223,10 +230,9 @@ var MK_ThreeLinkAge = (function () {
                     }
 
                 }
-            }
-            //返回当前市区的所有柜台
-            if (typeof self.updateCounter === 'function') {
-                self.updateCounter(self.counterParam[3][firstCT.c], true)
+
+                if (typeof self.updateDistrict === 'function')
+                    self.updateDistrict();
             }
 
             if (typeof self.success === 'function') {
