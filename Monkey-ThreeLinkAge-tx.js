@@ -11,8 +11,6 @@ var MK_ThreeLinkAge = (function () {
 
     function $$(params) {
         var self = this;
-        //后台返回的数据
-        this.counterParam = this.setCounterId(params.data)
         //省dom
         this.oProvice = params.provice || null;
         //市dom
@@ -32,6 +30,8 @@ var MK_ThreeLinkAge = (function () {
 
         this.defaultText = params.defaultText || ["城市", "专柜"];
         this.addDefaultText = params.addDefaultText;
+        //后台返回的数据
+        this.counterParam = this.setCounterId(params.data);
         //init设置默认数据
         this.init();
         if (this.locationStates) {
