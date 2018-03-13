@@ -14,9 +14,9 @@ var MK_ThreeLinkAge = (function () {
         //省dom
         this.oProvice = params.provice || null;
         //市dom
-        this.oCity = params.city
+        this.oCity = params.city;
         //柜台dom
-        this.oDistrict = params.district
+        this.oDistrict = params.district;
         //是否启用定位
         this.locationStates = params.location;
         //设置默认值成功
@@ -90,6 +90,8 @@ var MK_ThreeLinkAge = (function () {
                 }
 
                 self.oCity.appendChild(createOptions(self.defaultText[1]));
+
+                if(self.oDistrict)
                 self.oDistrict.appendChild(createOptions(self.defaultText[2]));
             }
 
@@ -149,6 +151,7 @@ var MK_ThreeLinkAge = (function () {
                 }
             }, false);
 
+            if(self.oDistrict)
             self.oDistrict.addEventListener("change", function () {
                 //返回当前市的所有柜台
                 if (typeof self.updateDistrict === 'function') {
