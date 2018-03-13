@@ -118,6 +118,8 @@ var MK_ThreeLinkAge = (function () {
                         self.oDistrict.length = 1;
                     }
                     if (province == self.defaultText[0]) {
+                        if (typeof self.updateProvice === 'function')
+                            self.updateProvice([]);
                         return;
                     }
                     for (var j = 0; j < self.counterParam[2][province].length; j++) {
@@ -125,7 +127,8 @@ var MK_ThreeLinkAge = (function () {
                     }
 
                     if (typeof self.updateProvice === 'function')
-                        self.updateProvice({"msg": "更新成功"});
+                        self.updateProvice(self.counterParam[2][province]);
+
                 }, false);
 
             self.oCity.addEventListener("change", function () {
@@ -196,11 +199,13 @@ var MK_ThreeLinkAge = (function () {
                 }
 
                 if (typeof self.updateProvice === 'function')
-                    self.updateProvice();
+                    self.updateProvice(self.counterParam[2][firstCT.p]);
+                
+            } else {
+                firstCT.p = 'all';
             }
             var _cn;
-            //默认选中当前最近的市区
-            firstCT.p = self.oProvice ? firstCT.p : 'all';
+            
             self.oCity.length = 1;
             for (var j = 0; j < self.counterParam[2][firstCT.p].length; j++) {
                 oOptionC = document.createElement('option');
@@ -215,7 +220,7 @@ var MK_ThreeLinkAge = (function () {
             }
 
             if (typeof self.updateCity === 'function')
-                self.updateCity();
+                self.updateCity(self.counterParam[3][firstCT.c]);
 
             var _cc;
             //默认选中当前最近的柜台
