@@ -7,7 +7,7 @@ $.ajax({
     dataType: "JSON",
     success: function (result) {
         if(result.isSuccess){
-            new ThreeLinkAge({
+            new MK_ThreeLinkAge({
                 data: result.data,
                 provice: document.getElementById('province'),
                 city: document.getElementById('city'),
