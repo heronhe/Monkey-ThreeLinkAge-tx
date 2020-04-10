@@ -9,6 +9,7 @@
 使用案例：
 
      new MK_ThreeLinkAge({
+          key: "" //腾讯申请key
           data: result.data,
           provice: document.getElementById('province'), //省份dom对象，二级联动时，此参数为空
           city: document.getElementById('city'), //城市dom对象
