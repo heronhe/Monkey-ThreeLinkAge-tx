@@ -31,6 +31,8 @@ var MK_ThreeLinkAge = (function () {
         this.addDefaultText = params.addDefaultText;
         //后台返回的数据
         this.counterParam = this.setCounterId(params.data);
+        //坐标顺序
+        this.coordinateDataOrder = params.coordinateDataOrder;
         var self = this;
         //init设置默认数据
         this.init();
@@ -172,7 +174,11 @@ var MK_ThreeLinkAge = (function () {
             for (var i = 0; i < ctrLength; i++) {
                 var location = self.counterParam.AllCounterList[i].location.split(',')
                 //后台返回的数据中b坐标
-                var b = new qq.maps.LatLng(location[1], location[0]);
+                var b;
+                if(this.coordinateDataOrder == 1)
+                    b = new qq.maps.LatLng(location[1], location[0]);
+                else
+                    b = new qq.maps.LatLng(location[0], location[1]);
                 //腾讯地图api获取2点间距离,传入a,b
                 var distance = parseInt(qq.maps.geometry.spherical.computeDistanceBetween(a, b));
                 self.counterParam.AllCounterList[i].distance = distance;
@@ -300,14 +306,16 @@ var MK_ThreeLinkAge = (function () {
                     counterParam = cityList[j].list;
                     var  counterId, counterInfo;
                     for (var n = 0, lgt2 = counterParam.length; n < lgt2; n++) {
-                        counterId = counterParam[n].counterId;
+                        var item = counterParam[n];
+                        counterId = item.counterId;
                         counterInfo = {
                             id: counterId,
                             city: _c,
-                            counterName: counterParam[n].counterName,
-                            location: counterParam[n].location,
-                            address: counterParam[n].address || ''
                         };
+                        for(var p in item){
+                            counterInfo[p] = item[p];
+                        }
+
                         if(_p)
                             counterInfo.provice = _p;
                         AllCounterList.push(counterInfo);

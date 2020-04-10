@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45143360-65a4-46e0-a331-6eb906af1ce3" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.js" beforeDir="false" afterPath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.min.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1aLTvlULQAGu8nPaC2ywlupgvPT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45143360-65a4-46e0-a331-6eb906af1ce3" name="默认更改列表" comment="" />
+      <created>1586514106529</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586514106529</updated>
+      <workItem from="1586514108286" duration="1805000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="629" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586515092313">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="629" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.985@0.23.1680.985" timestamp="1586515092313" />
+  </component>
+</project>
