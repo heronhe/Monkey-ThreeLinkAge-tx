@@ -49,8 +49,24 @@ var MK_ThreeLinkAge = (function () {
                     document.body.appendChild(TXiframe);
                 }
 
+                var msgNum = 0;
+
                 var txLocationMessage = function (event) {
+                    ++msgNum;
                     var loc = event.data;
+                    if(!loc && msgNum == 1){
+                        return;
+                    }
+
+                    window.removeEventListener('message', txLocationMessage);
+
+                    if(!event.data){
+                        //定位失败
+                        if(typeof params.locationError === 'function'){
+                            params.locationError();
+                        }
+                    }
+
                     if (loc && loc.module == 'geolocation') {
                         var latlng = {lat: loc.lat, lng: loc.lng};
                         ggLocation = latlng;
@@ -70,7 +86,10 @@ var MK_ThreeLinkAge = (function () {
                         }
                         //计算2个坐标的距离
                         self.getDistance(latlng);
-                        window.removeEventListener('message', txLocationMessage);
+
+                        if(typeof params.locationSuccess === 'function'){
+                            params.locationSuccess();
+                        }
                     }
 
                 };

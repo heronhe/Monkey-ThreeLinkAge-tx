@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45143360-65a4-46e0-a331-6eb906af1ce3" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.js" beforeDir="false" afterPath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586514106529</updated>
-      <workItem from="1586514108286" duration="1805000" />
+      <workItem from="1586514108286" duration="1860000" />
+      <workItem from="1586772668478" duration="4114000" />
     </task>
     <servers />
   </component>
