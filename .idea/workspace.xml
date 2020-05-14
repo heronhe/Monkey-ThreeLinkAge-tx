@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45143360-65a4-46e0-a331-6eb906af1ce3" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.js" beforeDir="false" afterPath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.js" afterDir="false" />
     </list>
@@ -10,19 +12,41 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aLTvlULQAGu8nPaC2ywlupgvPT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Monkey-ThreeLinkAge-tx.min.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.min.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.Monkey-ThreeLinkAge-tx.min.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -35,14 +59,48 @@
       <option name="presentableId" value="Default" />
       <updated>1586514106529</updated>
       <workItem from="1586514108286" duration="1860000" />
-      <workItem from="1586772668478" duration="4114000" />
+      <workItem from="1586772668478" duration="4734000" />
+      <workItem from="1586844028850" duration="1646000" />
+      <workItem from="1589426244214" duration="3136000" />
     </task>
+    <task id="LOCAL-00001" summary="location iframe">
+      <created>1586780576535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586780576535</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="location iframe" />
+    <option name="LAST_COMMIT_MESSAGE" value="location iframe" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="423" y="120" key="CommitChangelistDialog2" timestamp="1586780576408">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="423" y="120" key="CommitChangelistDialog2/0.23.1680.985@0.23.1680.985" timestamp="1586780576408" />
+    <state width="1659" height="266" key="GridCell.Tab.0.bottom" timestamp="1589431246510">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state width="1659" height="266" key="GridCell.Tab.0.bottom/0.23.1680.984@0.23.1680.984" timestamp="1589431246510" />
+    <state width="1659" height="266" key="GridCell.Tab.0.center" timestamp="1589431246509">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state width="1659" height="266" key="GridCell.Tab.0.center/0.23.1680.984@0.23.1680.984" timestamp="1589431246509" />
+    <state width="1659" height="266" key="GridCell.Tab.0.left" timestamp="1589431246508">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state width="1659" height="266" key="GridCell.Tab.0.left/0.23.1680.984@0.23.1680.984" timestamp="1589431246508" />
+    <state width="1659" height="266" key="GridCell.Tab.0.right" timestamp="1589431246509">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state width="1659" height="266" key="GridCell.Tab.0.right/0.23.1680.984@0.23.1680.984" timestamp="1589431246509" />
     <state x="629" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586515092313">
       <screen x="0" y="23" width="1680" height="985" />
     </state>

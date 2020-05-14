@@ -31,8 +31,10 @@ var MK_ThreeLinkAge = (function () {
         this.addDefaultText = params.addDefaultText;
         //后台返回的数据
         this.counterParam = this.setCounterId(params.data);
+        console.log(this.counterParam)
         //坐标顺序
         this.coordinateDataOrder = params.coordinateDataOrder;
+        this.timeout = params.timeout || 5000;
         var self = this;
         //init设置默认数据
         this.init();
@@ -51,7 +53,13 @@ var MK_ThreeLinkAge = (function () {
 
                 var msgNum = 0;
 
-                var txLocationMessage = function (event) {
+                var locationTimeout = setTimeout(function (){
+                    if(typeof params.locationError === 'function'){
+                        params.locationError();
+                    }
+                }, this.timeout);
+
+                function txLocationMessage (event) {
                     ++msgNum;
                     var loc = event.data;
                     if(!loc && msgNum == 1){
@@ -59,6 +67,9 @@ var MK_ThreeLinkAge = (function () {
                     }
 
                     window.removeEventListener('message', txLocationMessage);
+
+                    if(locationTimeout)
+                        clearTimeout(locationTimeout);
 
                     if(!event.data){
                         //定位失败
@@ -92,13 +103,13 @@ var MK_ThreeLinkAge = (function () {
                         }
                     }
 
-                };
+                }
                 //腾讯地图获取当前经纬度
                 window.addEventListener('message', txLocationMessage, false);
             }
         }
         this.changeHandler();
-    };
+    }
     $$.prototype = {
         init: function () {
             if(!this.proviceElem)
@@ -132,7 +143,7 @@ var MK_ThreeLinkAge = (function () {
             if(this.proviceElem)
                 this.proviceElem.addEventListener("change", function () {
                     var province = self.proviceElem.value;
-                        self.cityElem.length = 1;
+                    self.cityElem.length = 1;
                     if (self.districtElem)
                         self.districtElem.length = 1;
 
@@ -211,7 +222,7 @@ var MK_ThreeLinkAge = (function () {
             //所有门店排序
             var sortObJInfo = this.sortStore(this.counterParam.AllCounterList, 'distance');
             var firstStore = sortObJInfo[0];
-            
+
             //当前城市门店排序
             for(var _p in this.counterParam.CityList){
                 this.counterParam.AllCounterList[_p] = this.sortStore(this.counterParam.CityList[_p], 'distance');
@@ -230,7 +241,7 @@ var MK_ThreeLinkAge = (function () {
 
                 if (typeof this.updateProvice === 'function')
                     this.updateProvice(this.counterParam.ProvinceList[firstStore.provice]);
-                
+
             } else {
                 firstStore.provice = 'all';
             }
@@ -240,7 +251,7 @@ var MK_ThreeLinkAge = (function () {
 
             for (var j = 0; j < this.counterParam.ProvinceList[firstStore.provice].length; j++) {
                 oOptionC = document.createElement('option');
-                _cn = this.counterParam.ProvinceList[firstStore.provice][j]
+                _cn = this.counterParam.ProvinceList[firstStore.provice][j];
                 oOptionC.innerHTML = _cn;
                 this.cityElem.appendChild(oOptionC);
                 if (this.location) {
@@ -258,7 +269,7 @@ var MK_ThreeLinkAge = (function () {
             if (this.districtElem) {
                 this.districtElem.length = 1;
                 for (var k = 0; k < self.counterParam.CityList[firstStore.city].length; k++) {
-                    oOptionD = document.createElement('option');
+                    oOptionD = _cn;
                     _cc = self.counterParam.CityList[firstStore.city][k];
                     oOptionD.innerHTML = _cc.counterName;
                     this.districtElem.appendChild(oOptionD);
@@ -276,6 +287,66 @@ var MK_ThreeLinkAge = (function () {
 
             if (typeof this.success === 'function') {
                 this.success({data: true});
+            }
+
+        },
+        setDefaultCounter: function (counterId) {
+            var self = this;
+            //未完成定位不可以设置
+            if(self.location && !ggLocation)
+                return;
+
+            var counterInfo,
+                AllCounterList = this.counterParam.AllCounterList;
+
+            //查询柜台信息
+            for(var b = 0, lgt = AllCounterList.length; b < lgt; b++){
+                if(AllCounterList[b].counterId == counterId){
+                    counterInfo = AllCounterList[b];
+                    break;
+                }
+            }
+
+            //默认选中最近的省
+            var oOptionC, oOptionD;
+
+            if(this.proviceElem) {
+                for (var i = 0; i < this.proviceElem.options.length; i++) {
+                    var opItem = this.proviceElem.options[i];
+                    if (opItem.value === counterInfo.provice) {
+                        opItem.selected = true;
+                    } else
+                        opItem = false
+                }
+
+            } else {
+                counterInfo.provice = 'all';
+            }
+
+            var _cn;
+
+            for (var j = 0; j < this.counterParam.ProvinceList[counterInfo.provice].length; j++) {
+                oOptionC = document.createElement('option');
+                _cn = this.counterParam.ProvinceList[counterInfo.provice][j];
+                oOptionC.innerHTML = _cn;
+                this.cityElem.appendChild(oOptionC);
+                if (_cn == counterInfo.city) {
+                    oOptionC.selected = true;
+                }
+            }
+
+            var _cc;
+            //默认选中当前最近的柜台
+            if (this.districtElem) {
+                this.districtElem.length = 1;
+                for (var k = 0; k < self.counterParam.CityList[counterInfo.city].length; k++) {
+                    _cc = self.counterParam.CityList[counterInfo.city][k];
+                    oOptionD = createOptions(_cc.counterName, counterId);
+                    this.districtElem.appendChild(oOptionD);
+                    if (_cc.counterName == counterInfo.counterName) {
+                        oOptionD.selected = true;
+                    }
+                }
             }
 
         },
@@ -358,8 +429,3 @@ var MK_ThreeLinkAge = (function () {
 
     return $$;
 })();
-
-
-
-
-
