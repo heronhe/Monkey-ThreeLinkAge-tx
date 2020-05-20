@@ -307,6 +307,9 @@ var MK_ThreeLinkAge = (function () {
                 }
             }
 
+            if(!counterInfo)
+                return;
+
             //默认选中最近的省
             var oOptionC, oOptionD;
 
