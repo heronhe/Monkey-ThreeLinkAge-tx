@@ -116,15 +116,16 @@ var MK_ThreeLinkAge = (function () {
 
             if(this.addDefaultText) {
                 if(this.proviceElem){
+                    this.proviceElem.length = 0;
                     this.proviceElem.appendChild(createOptions(this.defaultText[0]));
                 }
                 if(this.cityElem){
-                    this.cityElem.length = 1;
+                    this.cityElem.length = 0;
                     this.cityElem.appendChild(createOptions(this.defaultText[1]));
                 }
 
                 if(this.districtElem){
-                    this.districtElem.length = 1;
+                    this.districtElem.length = 0;
                     this.districtElem.appendChild(createOptions(this.defaultText[2]));
                 }
             }
