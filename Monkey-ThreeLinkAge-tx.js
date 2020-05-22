@@ -30,8 +30,7 @@ var MK_ThreeLinkAge = (function () {
         this.defaultText = params.defaultText || ["城市", "专柜"];
         this.addDefaultText = params.addDefaultText;
         //后台返回的数据
-        this.counterParam = this.setCounterId(params.data);
-        console.log(this.counterParam)
+        this.counterParam = this.setCounterData(params.data);
         //坐标顺序
         this.coordinateDataOrder = params.coordinateDataOrder;
         this.timeout = params.timeout || 5000;
@@ -114,22 +113,27 @@ var MK_ThreeLinkAge = (function () {
         init: function () {
             if(!this.proviceElem)
                 this.defaultText.splice(0, 0, '');
+
             if(this.addDefaultText) {
                 if(this.proviceElem){
                     this.proviceElem.appendChild(createOptions(this.defaultText[0]));
                 }
+                if(this.cityElem){
+                    this.cityElem.length = 1;
+                    this.cityElem.appendChild(createOptions(this.defaultText[1]));
+                }
 
-                this.cityElem.appendChild(createOptions(this.defaultText[1]));
-
-                if(this.districtElem)
+                if(this.districtElem){
+                    this.districtElem.length = 1;
                     this.districtElem.appendChild(createOptions(this.defaultText[2]));
+                }
             }
 
             if(this.proviceElem) {
                 for (var i = 0, lgt = this.counterParam.PallList.length; i < lgt; i++) {
                     this.proviceElem.appendChild(createOptions(this.counterParam.PallList[i]));
                 }
-            } else{
+            } else if(this.cityElem){
                 var cityList = this.counterParam.ProvinceList.all;
                 for (var i = 0, lgt = cityList.length; i < lgt; i++) {
                     this.cityElem.appendChild(createOptions(cityList[i]));
@@ -368,7 +372,7 @@ var MK_ThreeLinkAge = (function () {
 
             return _ary;
         },
-        setCounterId: function (data) {
+        setCounterData: function (data) {
             var self = this,
                 AllCounterList = [], //全国门店列表
                 PallList = [],
@@ -425,6 +429,14 @@ var MK_ThreeLinkAge = (function () {
                 ProvinceList: ProvinceList,
                 CityList: CityList
             };
+        },
+        //更新数据
+        updataCounterData: function(data){
+            this.counterParam = this.setCounterData(data);
+            this.init();
+            if (this.location && ggLocation) {
+                this.getDistance(ggLocation);
+            }
         }
     };
 

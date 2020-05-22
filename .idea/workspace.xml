@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45143360-65a4-46e0-a331-6eb906af1ce3" name="默认更改列表" comment="add setcounter">
+    <list default="true" id="45143360-65a4-46e0-a331-6eb906af1ce3" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.js" beforeDir="false" afterPath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,8 @@
       <workItem from="1586844028850" duration="1646000" />
       <workItem from="1589426244214" duration="3898000" />
       <workItem from="1589456865347" duration="573000" />
+      <workItem from="1589947171295" duration="151000" />
+      <workItem from="1590118746856" duration="656000" />
     </task>
     <task id="LOCAL-00001" summary="location iframe">
       <created>1586780576535</created>
@@ -83,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589433381497</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add setcounter">
+      <created>1589947306049</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589947306049</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,10 +105,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="add setcounter" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="423" y="120" key="CommitChangelistDialog2" timestamp="1589433451418">
+    <state x="423" y="120" key="CommitChangelistDialog2" timestamp="1589947305699">
       <screen x="0" y="23" width="1680" height="984" />
     </state>
-    <state x="423" y="120" key="CommitChangelistDialog2/0.23.1680.984@0.23.1680.984" timestamp="1589433451418" />
+    <state x="423" y="120" key="CommitChangelistDialog2/0.23.1680.984@0.23.1680.984" timestamp="1589947305699" />
     <state x="423" y="120" key="CommitChangelistDialog2/0.23.1680.985@0.23.1680.985" timestamp="1586780576408" />
     <state width="1659" height="266" key="GridCell.Tab.0.bottom" timestamp="1589452865151">
       <screen x="0" y="23" width="1680" height="984" />
@@ -116,10 +126,10 @@
       <screen x="0" y="23" width="1680" height="984" />
     </state>
     <state width="1659" height="266" key="GridCell.Tab.0.right/0.23.1680.984@0.23.1680.984" timestamp="1589452865151" />
-    <state x="440" y="256" key="Vcs.Push.Dialog.v2" timestamp="1589433456287">
+    <state x="440" y="256" key="Vcs.Push.Dialog.v2" timestamp="1589947310587">
       <screen x="0" y="23" width="1680" height="984" />
     </state>
-    <state x="440" y="256" key="Vcs.Push.Dialog.v2/0.23.1680.984@0.23.1680.984" timestamp="1589433456287" />
+    <state x="440" y="256" key="Vcs.Push.Dialog.v2/0.23.1680.984@0.23.1680.984" timestamp="1589947310587" />
     <state x="629" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586515092313">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
