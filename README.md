@@ -17,17 +17,26 @@
           location:false, //是否开启定位
           defaultText:["省份", "城市", "专柜"], //默认select未选择时显示内容
           addDefaultText: false,
+          timeout: 5000, //定位超时时间
+          coordinateDataOrder: 1, //柜台数据中经纬度顺序，例如"location": "121.48329150361512,31.238958826715166"
           updateProvice: function () { //选择省份时执行事件
-              //console.log(1)
+              //省份选择
           },
           updateCity: function () {
-              //console.log(2)
+              //城市选择
           },
           updateDistrict: function () {
-              //console.log(3)
-          }
+              //区选择
+          },
+          locationError: function () {
+              //定位失败
+          },
       });
 
+方法：
+
+（1）setDefaultCounter
+设置默认柜台，参数为counterId
 
 result.data 通过接口获取到的柜台信息，数据格式如下：
 
