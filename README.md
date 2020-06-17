@@ -33,7 +33,7 @@
           },
       });
 
-方法：
+### 方法：
 
 （1）setDefaultCounter
 设置默认柜台，参数为counterId

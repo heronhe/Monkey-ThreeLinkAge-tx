@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://map.qq.com/api/js?v=2.exp&libraries=drawing,geometry,autocomplete,convertor"></script>
+    <script src="Monkey-Linkage-tx-v1.0.1.js"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+    <div>
+        <select id="province"></select>
+        <select id="city"></select>
+        <select id="district"></select>
+        <select id="counter"></select>
+    </div>
+    <script>
+
+
+       var mkt =  new MK_Linkage({
+            data: resData.data,
+            domList: [{
+                text: '省份',
+                element: document.querySelector('#province'),
+                update: function (v) {
+                    console.log('province' + v)
+                }
+            },{
+                text: '城市',
+                element: document.querySelector('#city'),
+                update: function (v) {
+                    console.log('city' + v)
+                }
+            },{
+                text: '地区',
+                element: document.querySelector('#district'),
+                update: function (v) {
+                    console.log('district' + v)
+                }
+            },{
+                text: '柜台',
+                element: document.querySelector('#counter'),
+                update: function (v) {
+                    console.log('counter' +v)
+                }
+            }],
+            location: true
+        });
+
+       // setTimeout(() => {
+       //    mkt.setDefaultCounter("H9856");
+       // }, 500)
+    </script>
+</body>
+</html>

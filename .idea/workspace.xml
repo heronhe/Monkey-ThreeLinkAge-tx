@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45143360-65a4-46e0-a331-6eb906af1ce3" name="默认更改列表" comment="add function updataCounterData">
+    <list default="true" id="45143360-65a4-46e0-a331-6eb906af1ce3" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RunManager">
     <configuration name="Monkey-ThreeLinkAge-tx.min.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Monkey-ThreeLinkAge-tx.min.js" working-dir="$PROJECT_DIR$">
@@ -63,7 +65,8 @@
       <workItem from="1589456865347" duration="573000" />
       <workItem from="1589947171295" duration="151000" />
       <workItem from="1590118746856" duration="3121000" />
-      <workItem from="1591866633299" duration="424000" />
+      <workItem from="1591866633299" duration="1024000" />
+      <workItem from="1592379034411" duration="12943000" />
     </task>
     <task id="LOCAL-00001" summary="location iframe">
       <created>1586780576535</created>
@@ -114,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590122289398</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add function updataCounterData">
+      <created>1591867065855</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591867065855</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,10 +137,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="add function updataCounterData" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="423" y="120" key="CommitChangelistDialog2" timestamp="1590127542831">
+    <state x="423" y="120" key="CommitChangelistDialog2" timestamp="1591867065741">
       <screen x="0" y="23" width="1680" height="984" />
     </state>
-    <state x="423" y="120" key="CommitChangelistDialog2/0.23.1680.984@0.23.1680.984" timestamp="1590127542831" />
+    <state x="423" y="120" key="CommitChangelistDialog2/0.23.1680.984@0.23.1680.984" timestamp="1591867065741" />
     <state x="423" y="120" key="CommitChangelistDialog2/0.23.1680.985@0.23.1680.985" timestamp="1586780576408" />
     <state width="1659" height="266" key="GridCell.Tab.0.bottom" timestamp="1589452865151">
       <screen x="0" y="23" width="1680" height="984" />
@@ -148,13 +158,25 @@
       <screen x="0" y="23" width="1680" height="984" />
     </state>
     <state width="1659" height="266" key="GridCell.Tab.0.right/0.23.1680.984@0.23.1680.984" timestamp="1589452865151" />
-    <state x="440" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590122275837">
+    <state x="349" y="154" key="SettingsEditor" timestamp="1592391241107">
       <screen x="0" y="23" width="1680" height="984" />
     </state>
-    <state x="440" y="256" key="Vcs.Push.Dialog.v2/0.23.1680.984@0.23.1680.984" timestamp="1590122275837" />
+    <state x="349" y="154" key="SettingsEditor/0.23.1680.984@0.23.1680.984" timestamp="1592391241107" />
+    <state x="440" y="256" key="Vcs.Push.Dialog.v2" timestamp="1591867090222">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state x="440" y="256" key="Vcs.Push.Dialog.v2/0.23.1680.984@0.23.1680.984" timestamp="1591867090222" />
+    <state x="484" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592390556402">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state x="484" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.984@0.23.1680.984" timestamp="1592390556402" />
     <state x="629" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586515092313">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state x="629" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.985@0.23.1680.985" timestamp="1586515092313" />
+    <state x="505" y="240" width="670" height="676" key="search.everywhere.popup" timestamp="1592388036470">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state x="505" y="240" width="670" height="676" key="search.everywhere.popup/0.23.1680.984@0.23.1680.984" timestamp="1592388036470" />
   </component>
 </project>
