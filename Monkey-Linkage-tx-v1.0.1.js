@@ -119,16 +119,11 @@ var MK_Linkage = (function () {
                 (function(i){
                     domItem.element.addEventListener("change", function () {
                         var selectVal = this.value;
-                        if(typeof _this.domList[i].update == 'function')
-                            _this.domList[i].update(selectVal);
-
                         var level = i + 1;
 
                         for(m = level; m < lgt; m++){
                             if(_this.domList[m].element.length > 1){
                                 _this.domList[m].element.length = 1;
-                                if(typeof _this.domList[m].update == 'function')
-                                    _this.domList[m].update();
                             }
                         }
 
@@ -136,6 +131,9 @@ var MK_Linkage = (function () {
                             _this.temporaryData[level] = _this.getList(selectVal, _this.temporaryData[i]);
                             _this.addOptions(_this.domList[level].element, _this.temporaryData[level]);
                         }
+
+                        if(typeof _this.domList[i].update == 'function')
+                            _this.domList[i].update(selectVal, level == lgt - 1 ? _this.temporaryData[level] : null);
 
                     }, false);
                 })(i);

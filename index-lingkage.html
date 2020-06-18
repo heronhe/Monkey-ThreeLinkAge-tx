@@ -22,26 +22,30 @@
             domList: [{
                 text: '省份',
                 element: document.querySelector('#province'),
-                update: function (v) {
-                    console.log('province' + v)
+                update: function (v, list) {
+                    console.log('province' + v);
+                    console.log(list)
                 }
             },{
                 text: '城市',
                 element: document.querySelector('#city'),
-                update: function (v) {
+                update: function (v, list) {
                     console.log('city' + v)
+                    console.log(list)
                 }
             },{
                 text: '地区',
                 element: document.querySelector('#district'),
-                update: function (v) {
+                update: function (v, list) {
                     console.log('district' + v)
+                    console.log(list)
                 }
             },{
                 text: '柜台',
                 element: document.querySelector('#counter'),
-                update: function (v) {
+                update: function (v, list) {
                     console.log('counter' +v)
+                    console.log(list)
                 }
             }],
             location: true
