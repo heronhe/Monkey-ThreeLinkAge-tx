@@ -93,7 +93,7 @@ var MK_Linkage = (function () {
         init: function () {
             for(let val of this.domList){
                 if(!val.element)
-                    return;
+                    continue;
 
                 val.element.length = 0;
                 val.element.appendChild(createOptions(val.text || '请选择'));
@@ -114,7 +114,7 @@ var MK_Linkage = (function () {
             for(var i = 0, lgt = this.domList.length; i < lgt; i++){
                 var domItem = this.domList[i];
                 if(!domItem.element)
-                    return;
+                    continue;
 
                 (function(i){
                     domItem.element.addEventListener("change", function () {
@@ -122,18 +122,20 @@ var MK_Linkage = (function () {
                         var level = i + 1;
 
                         for(m = level; m < lgt; m++){
-                            if(_this.domList[m].element.length > 1){
+                            if(_this.domList[m].element && _this.domList[m].element.length > 1){
                                 _this.domList[m].element.length = 1;
                             }
                         }
 
                         if(level < lgt){
                             _this.temporaryData[level] = _this.getList(selectVal, _this.temporaryData[i]);
-                            _this.addOptions(_this.domList[level].element, _this.temporaryData[level]);
+
+                            if(_this.domList[level].element)
+                                _this.addOptions(_this.domList[level].element, _this.temporaryData[level]);
                         }
 
                         if(typeof _this.domList[i].update == 'function')
-                            _this.domList[i].update(selectVal, level == lgt - 1 ? _this.temporaryData[level] : null);
+                            _this.domList[i].update(selectVal, _this.temporaryData[level] || null);
 
                     }, false);
                 })(i);
